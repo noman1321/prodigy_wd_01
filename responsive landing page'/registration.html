@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    background: url(images.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Add a semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add a subtle shadow */
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+
+  input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+<script>
+  // Get the form element
+  const form = document.querySelector('form');
+
+  // Add a submit event listener
+  form.addEventListener('submit', (event) => {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Get the form data
+    const data = new FormData(form);
+
+    // Send the data to the server
+    fetch('/register', {
+      method: 'POST',
+      body: data,
+    });
+  });
+</script>
+
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form action="/register" method="post">
+      <input type="text" name="name" placeholder="Name">
+      <input type="email" name="email" placeholder="Email">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="Register">
+    </form>
+  </div>
+</body>
+
+</html>

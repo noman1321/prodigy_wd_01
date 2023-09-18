@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE website landing web page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,100;1,300;1,400;1,500;1,600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: url('airlins.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            position: relative;
+            top: 0;
+            width: 100%;
+            padding: 30px 20px;
+            /* Adjust padding for better mobile responsiveness */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            color: #0C4F60;
+            font-size: 24px;
+            /* Adjust font size for better mobile responsiveness */
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            /* Center navigation vertically */
+        }
+
+        .navigation a {
+            text-decoration: none;
+            font-size: 18px;
+            /* Adjust font size for better mobile responsiveness */
+            margin-right: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .navigation a:hover {
+            color: #0C4F60;
+        }
+
+        .menu-checkbox {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .close-btn {
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check:checked~header .navigation {
+            flex-direction: column;
+            align-items: flex-start;
+            background: rgba(0, 0, 0, 0.8);
+            /* Add background for better visibility */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            /* Ensure navigation is on top of content */
+            padding-top: 100px;
+            /* Add padding for better spacing */
+            transition: 0.3s;
+        }
+
+        #check:checked~header .navigation a {
+            margin: 10px 20px;
+            /* Adjust margins for better spacing */
+        }
+
+        #check:checked~header .menu-checkbox {
+            display: none;
+        }
+
+        #check:checked~header .close-btn {
+            display: block;
+        }
+
+        .content {
+            max-width: 650px;
+            margin: 60px 20px;
+            /* Adjust margins for better mobile responsiveness */
+            text-align: center;
+            /* Center content horizontally */
+            color: #fff;
+            /* Add text color for better visibility */
+        }
+
+        .content .info h2 {
+            font-size: 36px;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .content .info h2 span {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .content .info p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .content .info-btn {
+            background: #226A80;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .content .info-btn:hover {
+            background: #0C4F60;
+        }
+
+        .media-icons {
+            text-align: center;
+            margin-top: 20px;
+            /* Add margin for better spacing */
+        }
+
+        .media-icons a {
+            position: relative;
+            color: #111;
+            font-size: 25px;
+            margin-right: 20px;
+        }
+
+        .media-icons a:hover {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">logo</a></h2>
+            <input type="checkbox" id="check">
+            <div class="navigation">
+                <label for="check">
+                    <i class="fas fa-bars menu-checkbox"></i>
+                    <i class="fas fa-times close-btn"></i>
+                </label>
+                <a href="home.html">home</a>
+                <a href="#">about</a>
+                <a href="#">info</a>
+                <a href="#">service</a>
+                <a href="#">contact</a>
+            </div>
+        </header>
+        <div class="content">
+            <div class="info">
+                <h2>make your own limit<br><span>lufthansa airways</span></h2>
+                <p>Whether you have a high school completion certificate or a graduate degree in aeronautics, the
+                    aviation industry can
+                    provide many fascinating opportunities. However, each role requires a specific set of skills and
+                    qualifications. Once
+                    you understand the requirements of the different roles as a pilot, airport manager, and ground
+                    staff, you can decide
+                    where to apply. In this article, we will discuss nine jobs in the aviation industry and list the
+                    skills that help you
+                    become a suitable candidate.</p>
+                <a href="#" class="info-btn">more info</a>
+            </div>
+            <div class="registration">
+                <a href="registration.html" class="info-btn">register now</a>
+            </div>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+</body>
+
+</html>

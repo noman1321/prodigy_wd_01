@@ -1,0 +1,9 @@
+ p .p {
+     font-family: 'Courier New', Courier, monospace;
+     font-size: 100px;
+     text-transform: uppercase;
+     text-decoration: wavy;
+     background-color: aqua;
+     color: black;
+
+ }
